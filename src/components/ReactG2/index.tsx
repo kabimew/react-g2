@@ -15,7 +15,9 @@ export type Axes = Record<
 
 export type LineShape = 'line' | 'smooth' | 'dot' | 'dash' | 'shpline';
 
-export type Spec = Partial<Omit<ChartProps, 'container'>>;
+export type Spec = Partial<Omit<ChartProps, 'container'>> & {
+  options: unknown;
+};
 
 const ReactG2: FC<{
   spec: Spec;
